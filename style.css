@@ -1,11 +1,16 @@
 @charset "UTF-8";
 
 /* ==========================================
+   フォント読み込み（しっぽり明朝）
+   ========================================== */
+@import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&display=swap');
+
+/* ==========================================
    カラー・変数定義
    ========================================== */
 :root {
-  --text-dark-brown: #fff0f5;     
-  --text-base: #fff0f5;           
+  --text-dark-brown: #fff0f5;      
+  --text-base: #fff0f5;            
   --bg-dark: #2b1113;
   --accent-red: #8b181b;
   --bright-red: #c9171e;
@@ -30,7 +35,7 @@ html, body {
 body {
   background-color: var(--bg-dark);
   color: var(--text-base);
-  font-family: 'Times New Roman', "Yu Mincho", "游明朝", serif;
+  font-family: 'Shippori Mincho', 'Times New Roman', "Yu Mincho", "游明朝", serif;
   line-height: 1.8;
   letter-spacing: 0.08em;
 }
@@ -107,7 +112,7 @@ img {
 }
 
 /* ==========================================
-   メインビジュアル
+   メインビジュアル（PC版）
    ========================================== */
 .top-main-visual {
   position: relative;
@@ -128,6 +133,8 @@ img {
   position: relative;
   z-index: 2;
   max-width: 45%;
+  display: flex;
+  flex-direction: column;
 }
 
 .catch-lead {
@@ -135,10 +142,12 @@ img {
   font-size: 1.2rem;
   font-weight: 700;
   letter-spacing: 0.25em;
+  order: 1;
 }
 
 .catch-title {
   margin-top: 20px;
+  order: 2;
 }
 
 .catch-title img {
@@ -960,45 +969,41 @@ rt { font-size: 0.40em; }
     width: 100%;
   }
 
-/* --- スマホ用メインビジュアル調整 --- */
+  /* --- スマホ用メインビジュアル調整 --- */
   .top-main-visual {
     height: auto;
     min-height: calc(100vh - 60px);
-    margin-top: 60px; /* ヘッダー分下げる */
+    margin-top: 60px;
     padding: 40px 20px 60px;
-    /* 背景画像としての表示を無効化 */
-    background-image: none;
-    
-    /* 上下に並べる設定 */
+    background-image: none; /* スマホでは背景画像を削除 */
     display: flex;
-    flex-direction: column; /* 縦並び */
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 30px;
   }
 
-.mv-catch {
-  max-width: 100%;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+  .mv-catch {
+    max-width: 100%;
+    text-align: center;
+    align-items: center;
+  }
 
-.catch-title {
-  margin-top: 20px;
-  order: -1; /* タイトル（画像）を先頭（上）に持ってくる */
-}
+  .catch-title {
+    margin-top: 0;
+    order: 1; /* タイトル（画像）を先頭（上）に配置 */
+  }
 
-.catch-title img {
-  max-width: 100%;
-  height: auto;
-  margin: 0 auto;
-}
+  .catch-title img {
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
 
-.catch-lead {
-  order: 1; /* リード文などを画像の下に配置 */
-}
+  .catch-lead {
+    order: 2; /* リード文（文字）を画像の下に配置 */
+    margin-top: 20px;
+  }
 
   /* メニューのスマホ対応 */
   .menu-columns {
