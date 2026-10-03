@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character｜月華葬送</title>
+
+    <!-- Google Fonts（和風明朝体） -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;600;800&display=swap" rel="stylesheet">
+
+    <!-- CSSの読み込み -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- JavaScriptの読み込み -->
+    <script src="main.js" defer></script>
+</head>
+<body class="character-page">
+
+    <!-- ヘッダー（共通） -->
+    <header class="site-header">
+        <div class="header-inner">
+            <div class="site-logo">
+                <a href="index.html">同人サークル【或る夜の書架】制作</a>
+            </div>
+            <button class="menu-trigger" id="menuTrigger" aria-label="メニューを開く">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- 下層ページコンテンツ -->
+    <main class="sub-container">
+        <!-- 花びら舞い落ちエリア -->
+        <div class="shooting-stars" aria-hidden="true"></div>
+
+        <h1 class="page-title">CHARACTER</h1>
+
+        <!-- 六角形ジグザグセレクター（上部バー） -->
+        <nav class="chara-hex-nav">
+            <div class="hex-row">
+                <!-- ヒロイン（デフォルト選択） -->
+                <button class="hex-item active" data-chara="runa" aria-label="蒼井月">
+                    <span class="hex-inner">
+                        <img src="chara_runa_thumb.png" alt="月" onerror="this.style.display='none'">
+                        <span class="hex-name">蒼井 月</span>
+                    </span>
+                </button>
+                <!-- キャラクター2 -->
+                <button class="hex-item" data-chara="tokimori" aria-label="弥永季護">
+                    <span class="hex-inner">
+                        <img src="chara_tokimori_thumb.png" alt="季護" onerror="this.style.display='none'">
+                        <span class="hex-name">弥永 季護</span>
+                    </span>
+                </button>
+                <!-- キャラクター3 -->
+                <button class="hex-item" data-chara="hisui" aria-label="翡翠">
+                    <span class="hex-inner">
+                        <img src="chara_hisui_thumb.png" alt="翡翠" onerror="this.style.display='none'">
+                        <span class="hex-name">翡翠</span>
+                    </span>
+                </button>
+                <!-- キャラクター4 -->
+                <button class="hex-item" data-chara="ginsei" aria-label="銀星">
+                    <span class="hex-inner">
+                        <img src="chara_ginsei_thumb.png" alt="銀星" onerror="this.style.display='none'">
+                        <span class="hex-name">銀星</span>
+                    </span>
+                </button>
+            </div>
+            <!-- ジグザグ用にずらした2行目 -->
+            <div class="hex-row shift">
+                <!-- キャラクター5 -->
+                <button class="hex-item" data-chara="sub1" aria-label="サブキャラ1">
+                    <span class="hex-inner">
+                        <span class="hex-name">???</span>
+                    </span>
+                </button>
+                <!-- キャラクター6 -->
+                <button class="hex-item" data-chara="sub2" aria-label="サブキャラ2">
+                    <span class="hex-inner">
+                        <span class="hex-name">???</span>
+                    </span>
+                </button>
+                <!-- キャラクター7 -->
+                <button class="hex-item" data-chara="sub3" aria-label="サブキャラ3">
+                    <span class="hex-inner">
+                        <span class="hex-name">???</span>
+                    </span>
+                </button>
+                <!-- キャラクター8 -->
+                <button class="hex-item" data-chara="sub4" aria-label="サブキャラ4">
+                    <span class="hex-inner">
+                        <span class="hex-name">???</span>
+                    </span>
+                </button>
+                <!-- キャラクター9 -->
+                <button class="hex-item" data-chara="sub5" aria-label="サブキャラ9">
+                    <span class="hex-inner">
+                        <span class="hex-name">???</span>
+                    </span>
+                </button>
+            </div>
+        </nav>
+
+        <!-- 画面左右いっぱいに広がる黒帯エリア（Storyと同等） -->
+        <div class="chara-band">
+            <div class="chara-display-area">
+
+                <!-- 1. ヒロイン（デフォルト表示） -->
+                <article class="chara-card active" id="chara-runa">
+                    <div class="chara-visual">
+                        <img src="chara_runa.png" alt="月" onerror="this.style.display='none'">
+                    </div>
+                    <div class="chara-info">
+                        <h2 class="chara-name"><ruby>蒼井<rt>あおい</rt></ruby>  <ruby>月<rt>るな</rt></ruby><span class="chara-cv">CV：??</span></h2>
+                        <div class="chara-profile">
+                            <p class="profile-item"><strong>年齢：</strong>29歳</p>
+                            <p class="profile-item"><strong>職業：</strong>会社員</p>
+                        </div>
+                        <p class="chara-desc">
+                            憑りつかれ体質の社畜女子。<br>
+                            幼馴染みに虐められていたことが原因で男性恐怖症に。<br>
+                            <br>
+                            強そうと思われがちだが、本当は寂しがり屋で打たれ弱い。<br>
+                        </p>
+                        <blockquote class="chara-quote">
+                            「……誰かの『一番』になりたかった。それだけだったのに」
+                        </blockquote>
+                    </div>
+                </article>
+
+                <!-- 2. 弥永季護 -->
+                <article class="chara-card" id="chara-tokimori">
+                    <div class="chara-visual">
+                        <img src="chara_tokimori.png" alt="季護" onerror="this.style.display='none'">
+                    </div>
+                    <div class="chara-info">
+                        <h2 class="chara-name"><ruby>弥永<rt>やなが</rt></ruby>  <ruby>季護<rt>ときもり</rt></ruby><span class="chara-cv">CV：??</span></h2>
+                        <div class="chara-profile">
+                            <p class="profile-item"><strong>年齢：</strong>32歳</p>
+                            <p class="profile-item"><strong>身長：</strong>178cm</p>
+                            <p class="profile-item"><strong>職業：</strong>弥永神社　神主</p>
+                        </div>
+                        <p class="chara-desc">
+                            隠世を代々統治する弥永家の108代目当主。<br>
+                            言霊であやかしを従える力を持つ。<br>
+                            <br>
+                            人間が嫌いで、目付きも口調も悪い俺様。<br>
+                            その態度には何か理由があるようで……？<br>
+                        </p>
+                        <blockquote class="chara-quote">
+                            「死ぬくらいなら俺と結婚しろ」
+                        </blockquote>
+                    </div>
+                </article>
+
+                <!-- 3. 翡翠 -->
+                <article class="chara-card" id="chara-hisui">
+                    <div class="chara-visual">
+                        <img src="chara_hisui.png" alt="翡翠" onerror="this.style.display='none'">
+                    </div>
+                    <div class="chara-info">
+                        <h2 class="chara-name"><ruby>翡翠<rt>ひすい</rt></ruby></h2>
+                        <div class="chara-profile">
+                            <p class="profile-item"><strong>年齢：</strong>350歳くらい</p>
+                            <p class="profile-item"><strong>身長：</strong>170cm</p>
+                        </div>
+                        <p class="chara-desc">
+                            弥永神社にある翡翠石の付喪神。<br>
+                            人懐っこい性格で誰とでも仲良くなれるタイプ。<br>
+                            月のことを気に入っているようだが……？<br>
+                        </p>
+                        <blockquote class="chara-quote">
+                            「お姉ちゃんは僕のこと好き？」
+                        </blockquote>
+                    </div>
+                </article>
+
+                <!-- 4. 銀星 -->
+                <article class="chara-card" id="chara-ginsei">
+                    <div class="chara-visual">
+                        <img src="chara_hisui.png" alt="銀星" onerror="this.style.display='none'">
+                    </div>
+                    <div class="chara-info">
+                        <h2 class="chara-name"><ruby>銀星<rt>ぎんせい</rt></ruby></h2>
+                        <div class="chara-profile">
+                            <p class="profile-item"><strong>年齢：</strong>800歳くらい</p>
+                            <p class="profile-item"><strong>身長：</strong>182cm</p>
+                        </div>
+                        <p class="chara-desc">
+                            双子の白狐の弟。<br>
+                            人間の常識が通じる数少ないあやかしで、弥永神社に住んでいる。<br>
+                            人当たりが良く友好的な性格だが、それには理由があって……？<br>
+                        </p>
+                        <blockquote class="chara-quote">
+                            「月様のことはこの身に換えてでもお守りします」
+                        </blockquote>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- メニュー・オーバーレイ -->
+    <div class="menu-overlay" id="menuOverlay">
+        <button class="menu-close-btn" id="menuCloseBtn" aria-label="閉じる"></button>
+        <div class="menu-container">
+            <div class="menu-columns">
+                <div class="menu-col">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-main-title">Top</a></li>
+                        <li><a href="news.html" class="nav-main-title">News</a></li>
+                        <li><a href="story.html" class="nav-main-title">Story</a></li>
+                        <li><a href="character.html" class="nav-main-title">Character</a></li>
+                    </ul>
+                </div>
+                <div class="menu-col">
+                    <ul class="nav-list">
+                        <li><a href="cast-staff.html" class="nav-main-title">Cast & Staff</a></li>
+                        <li><a href="music-movie.html" class="nav-main-title">Music & Movie</a></li>
+                        <li><a href="product.html" class="nav-main-title">Product</a></li>
+                    </ul>
+                    <div class="official-links">
+                        <p class="links-title">Official Account</p>
+                        <div class="sns-icons">
+                            <a href="https://x.com/Gekka_info" target="_blank" rel="noopener">X (Twitter)</a>
+                            <a href="https://www.youtube.com/@Gekka_info" target="_blank" rel="noopener">YouTube</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- フッター -->
+    <footer class="site-footer">
+        <p class="copyright">&copy; GekkaSoso / 月華葬送 All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

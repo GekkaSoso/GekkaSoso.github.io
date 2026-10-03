@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>月華葬送</title>
+
+    <!-- Google Fonts（和風明朝体） -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;600;800&display=swap" rel="stylesheet">
+
+    <!-- CSSの読み込み -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- JavaScriptの読み込み -->
+    <script src="main.js" defer></script>
+</head>
+<body class="top-page">
+
+    <!-- ヘッダー（ロゴ ＆ 右上の三本線ボタン） -->
+    <header class="site-header">
+        <div class="header-inner">
+            <div class="site-logo">
+                <a href="index.html">同人サークル【或る夜の書架】制作</a>
+            </div>
+
+            <!-- 右上の三本線ボタン -->
+            <button class="menu-trigger" id="menuTrigger" aria-label="メニューを開く">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- 全画面メインビジュアル -->
+    <main class="top-main-visual">
+        <div class="shooting-stars" aria-hidden="true"></div>
+        <div class="mv-bg">
+            <img src="top.png" alt="月華葬送" onerror="this.style.display='none'">
+        </div>
+        <div class="mv-catch">
+            <p class="catch-lead">行き着く先は、</p>
+            <p class="catch-lead">“重すぎる愛”か“世界の破滅”か<span class="dash">—</span></p>
+            <h1 class="catch-title"><img src="title.png" alt="月華葬送" onerror="this.style.display='none'"></h1>
+        </div>
+    </main>
+
+    <!-- ニュースセクション -->
+    <section class="news-section" id="news">
+        <h2 class="section-title">NEWS</h2>
+        <ul class="news-list">
+            <li class="news-item">
+                <a href="20261004.html">
+                    <span class="news-date">2026.10.04</span>
+                    <span class="news-category">Info</span>
+                    <span class="news-title-text">公式サイトを公開しました。</span>
+                </a>
+            </li>
+            <li class="news-item">
+                <a href="20261001.html">
+                    <span class="news-date">2026.10.01</span>
+                    <span class="news-category">Event</span>
+                    <span class="news-title-text">2026/10/04 (Sun) 開催の文学フリマ福岡12に水奏・花月が参加します。</span>
+                </a>
+            </li>
+            <li class="news-item">
+                <a href="20260925.html">
+                    <span class="news-date">2026.09.25</span>
+                    <span class="news-category">Info</span>
+                    <span class="news-title-text">「月華葬送」プロジェクト始動と告知解禁しました。</span>
+                </a>
+            </li>
+        </ul>
+    </section>
+
+    <!-- メニュー・オーバーレイ -->
+    <div class="menu-overlay" id="menuOverlay">
+        <!-- 右上の閉じる(✕)ボタン -->
+        <button class="menu-close-btn" id="menuCloseBtn" aria-label="閉じる"></button>
+
+        <div class="menu-container">
+            <div class="menu-columns">
+                
+                <!-- 左カラム -->
+                <div class="menu-col">
+                    <ul class="nav-list">
+                        <li>
+                            <a href="index.html" class="nav-main-title">Top</a>
+                        </li>
+                        <li>h
+                            <a href="news.html" class="nav-main-title">News</a>
+                        </li>
+                        <li>
+                            <a href="story.html" class="nav-main-title">Story</a>
+                        </li>
+                        <li>
+                            <a href="character.html" class="nav-main-title">Character</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 右カラム -->
+                <div class="menu-col">
+                    <ul class="nav-list">
+                        <li>
+                            <a href="cast-staff.html" class="nav-main-title">Cast & Staff</a>
+                        </li>
+                        <li>
+                            <a href="music-movie.html" class="nav-main-title">Music & Movie</a>
+                        </li>
+                        <li>
+                            <a href="product.html" class="nav-main-title">Product</a>
+                        </li>
+                    </ul>
+
+                    <!-- 公式SNS / リンクエリア -->
+                    <div class="official-links">
+                        <p class="links-title">Official Account</p>
+                        <div class="sns-icons">
+                            <a href="https://x.com/Gekka_info" target="_blank" rel="noopener">X (Twitter)</a>
+                            <a href="https://www.youtube.com/@Gekka_info" target="_blank" rel="noopener">YouTube</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- フッター -->
+    <footer class="site-footer">
+        <p class="copyright">&copy; GekkaSoso / 月華葬送 All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

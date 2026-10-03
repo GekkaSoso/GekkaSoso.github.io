@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product｜月華葬送</title>
+
+    <!-- Google Fonts（和風明朝体） -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shippori-Mincho:wght@400;600;800&display=swap" rel="stylesheet">
+
+    <!-- CSSの読み込み -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- JavaScriptの読み込み -->
+    <script src="main.js" defer></script>
+</head>
+<body class="product-page">
+
+    <!-- ヘッダー（共通） -->
+    <header class="site-header">
+        <div class="header-inner">
+            <div class="site-logo">
+                <a href="index.html">同人サークル【或る夜の書架】制作</a>
+            </div>
+            <button class="menu-trigger" id="menuTrigger" aria-label="メニューを開く">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- 下層ページコンテンツ -->
+    <main class="sub-container">
+        <!-- 花びら舞い落ちエリア -->
+        <div class="shooting-stars" aria-hidden="true"></div>
+
+        <h1 class="page-title">PRODUCT</h1>
+
+        <!-- 画面左右いっぱいに広がる黒帯エリア（帯デザイン） -->
+        <div class="product-band">
+            <div class="product-container">
+
+                <!-- ===== 製品 1：新刊ノベル（限定特装版） ===== -->
+                <article class="product-item">
+                    <!-- 左側：パッケージ / 装丁画像 -->
+                    <div class="product-visual">
+                        <div class="package-frame">
+                            <img src="package_special.png" alt="月華葬送 特装版パッケージ" onerror="this.style.display='none'">
+                            <span class="product-badge"></span>
+                        </div>
+                    </div>
+
+                    <!-- 右側：必要事項・詳細スペック -->
+                    <div class="product-info">
+                        <p class="product-category"></p>
+                        <h2 class="product-title">『月華葬送 -愚者の選択-』</h2>
+
+                        <!-- 必要事項テーブル（スペック） -->
+                        <table class="product-spec">
+                            <tr>
+                                <th>対応機種</th>
+                                <td>PC (Windows)</td>
+                            </tr>
+                            <tr>
+                                <th>ジャンル</th>
+                                <td>和風あやかし狂愛ADV</td>
+                            </tr>
+                            <tr>
+                                <th>プレイ人数</th>
+                                <td>1人</td>
+                            </tr>
+                            <tr>
+                                <th>対象年齢</th>
+                                <td>全年齢（一部15歳以上対象）</td>
+                            </tr>
+                            <tr>
+                                <th>制作</th>
+                                <td>或る夜の書架　<a href="https://x.com/Gekka_info">X (Twitter)</a></td>
+                            </tr>
+                        </table>
+
+                        <p class="product-desc">
+                            
+                        </p>
+
+                        <!-- 購入・委託リンクボタン -->
+                        <div class="product-links">
+                            <a href="#" target="_blank" rel="noopener" class="buy-btn booth-btn">BOOTH</a>
+                            <a href="#" target="_blank" rel="noopener" class="buy-btn melon-btn">DLsite</a>
+                        </div>
+                    </div>
+                </article>
+
+
+            </div>
+        </div>
+    </main>
+
+    <!-- メニュー・オーバーレイ -->
+    <div class="menu-overlay" id="menuOverlay">
+        <button class="menu-close-btn" id="menuCloseBtn" aria-label="閉じる"></button>
+
+        <div class="menu-container">
+            <div class="menu-columns">
+                <div class="menu-col">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-main-title">Top</a></li>
+                        <li><a href="news.html" class="nav-main-title">News</a></li>
+                        <li><a href="story.html" class="nav-main-title">Story</a></li>
+                        <li><a href="character.html" class="nav-main-title">Character</a></li>
+                    </ul>
+                </div>
+                <div class="menu-col">
+                    <ul class="nav-list">
+                        <li><a href="cast-staff.html" class="nav-main-title">Cast & Staff</a></li>
+                        <li><a href="music-movie.html" class="nav-main-title">Music & Movie</a></li>
+                        <li><a href="product.html" class="nav-main-title">Product</a></li>
+                    </ul>
+                    <div class="official-links">
+                        <p class="links-title">Official Account</p>
+                        <div class="sns-icons">
+                            <a href="https://x.com/Gekka_info" target="_blank" rel="noopener">X (Twitter)</a>
+                            <a href="https://www.youtube.com/@Gekka_info" target="_blank" rel="noopener">YouTube</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- フッター -->
+    <footer class="site-footer">
+        <p class="copyright">&copy; GekkaSoso / 月華葬送 All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
