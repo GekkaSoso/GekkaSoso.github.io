@@ -975,21 +975,7 @@ rt { font-size: 0.40em; }
     justify-content: center;
     align-items: center;
     gap: 30px;
-  }
-
-/* 上に配置する画像用の疑似要素（またはHTML側の画像） */
-  .top-main-visual::before {
-    content: '';
-    display: block;
-    width: 100%;
-    max-width: 400px;
-    height: 320px; /* スマホ用画像エリアの高さ */
-    background-image: url('top.png');
-    background-repeat: no-repeat;
-    background-position: center top;
-    background-size: contain;
-    order: 1; /* 1番目（上）に配置 */
-  }
+  }	
 
 /* 下に配置する文字ブロック */
   .mv-catch {
