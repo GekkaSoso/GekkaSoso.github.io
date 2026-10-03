@@ -975,19 +975,30 @@ rt { font-size: 0.40em; }
     justify-content: center;
     align-items: center;
     gap: 30px;
-  }	
-
-/* 下に配置する文字ブロック */
-  .mv-catch {
-    order: 2; /* 2番目（下）に配置 */
-    max-width: 100%;
-    text-align: center;
   }
 
-  .catch-title img {
-    max-width: 100%;
-    margin: 0 auto;
-  }
+.mv-catch {
+  max-width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.catch-title {
+  margin-top: 20px;
+  order: -1; /* タイトル（画像）を先頭（上）に持ってくる */
+}
+
+.catch-title img {
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.catch-lead {
+  order: 1; /* リード文などを画像の下に配置 */
+}
 
   /* メニューのスマホ対応 */
   .menu-columns {
