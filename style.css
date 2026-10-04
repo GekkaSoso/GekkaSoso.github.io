@@ -991,48 +991,52 @@ rt { font-size: 0.40em; }
   /* --- スマホ用メインビジュアル調整 --- */
   .top-main-visual {
     height: auto;
-    min-height: calc(100vh - 60px);
     margin-top: 60px;
-    padding: 20px 10px 40px;
+    padding: 20px 0px 10px;
     background-image: none; /* スマホでは背景画像を削除 */
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: column-reverse;
+    justify-content: flex-start;
     align-items: center;
     gap: 30px;
   }
 
+/* 上のメイン画像エリア：画面幅いっぱいに拡大 */
+  .mv-image {
+    width: 100%; /* 横幅100%に指定 */
+    height: auto;
+  }
+
+  .mv-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+/* テキスト・ロゴエリア：両端に余白を設ける */
   .mv-catch {
-    width: 100%
+    width: 100%;
     max-width: 100%;
-    padding: 0 10px;
+    padding: 0 20px; /* 画像以外のテキスト・ロゴ部分だけに余白をつける */
     text-align: center;
     align-items: center;
   }
 
   .catch-title {
-    margin-top: 25px;
-    width: 100%;
-    order: initial;
+    margin-top: 0;
   }
 
   .catch-title img {
-    width: 100%;
-    max-width: 320px;
+    max-width: 100%;
     height: auto;
-    max-height: none;
-    margin: 0 auto;
+    margin: 30px auto;
   }
 
   .catch-lead {
-    width: 100%
-    order: initial;
-    font-size: 1.1rem;
-    letter-spacing: 0.15em;
-    margin-bottom: 6px;
+    margin-top: 20px;
   }
 
-  /* メニューのスマホ対応 */
+  /* メニュー */
   .menu-columns {
     flex-direction: column;
     gap: 20px;
@@ -1082,6 +1086,7 @@ rt { font-size: 0.40em; }
   }
 
   .page-title {
+    margin-top: 20px;
     padding-left: 20px;
     font-size: 1.8rem;
   }
