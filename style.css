@@ -112,33 +112,29 @@ img {
 }
 
 /* ==========================================
-   メインビジュアル（PC版）
+   メインビジュアル（PC版：左右分割レイアウト）
    ========================================== */
 .top-main-visual {
   position: relative;
   display: flex;
-  justify-content: flex-start;
   align-items: center;
   width: calc(100% - 70px);
   height: 100vh;
-  padding-left: 8%;
-  background-color: var(--bg-dark);
-  
-  /* --- 背景画像の設定調整 --- */
-  background-image: url('top.png');
-  background-repeat: no-repeat;
-  background-position: center right; /* 右寄りに配置 */
-  background-size: cover;            /* 画面いっぱいに綺麗に収める場合 */
-  /* もし右半分だけに背景を表示したい場合は下記にしてください */
-  /* background-size: contain; */
+  background-color: var(--bg-dark); /* 無地の背景色 */
+  overflow: hidden;
 }
 
+/* 左側半分：文字・ロゴエリア */
 .mv-catch {
   position: relative;
   z-index: 2;
-  max-width: 45%;
+  width: 50%;
+  height: 100%;
+  padding: 0 5%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .catch-lead {
@@ -146,18 +142,35 @@ img {
   font-size: 1.2rem;
   font-weight: 700;
   letter-spacing: 0.25em;
-  order: 1;
+  margin-bottom: 8px;
 }
 
 .catch-title {
   margin-top: 20px;
-  order: 2;
+  width: 100%;
 }
 
 .catch-title img {
-  max-width: 90%;
-  max-height: 180px;
+  max-width: 100%;
+  max-height: 200px;
   object-fit: contain;
+}
+
+/* 右側半分：メインビジュアル画像エリア */
+.mv-image {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.mv-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* エリアいっぱいに綺麗に表示（はみ出さず収めるなら contain に変更） */
+  object-position: center;
 }
 
 .dash {
@@ -340,7 +353,8 @@ img {
 }
 
 .news-list {
-  max-width: 800px;
+  max-width: 900px;
+  margin: 0%;
   list-style: none;
 }
 
@@ -412,7 +426,7 @@ body.story-page {
   backdrop-filter: blur(4px);
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 60px 0;
+  padding: 60px 8%;
   margin-top: 30px;
 }
 
@@ -430,6 +444,8 @@ body.story-page {
   width: calc(100% - 70px);
   min-height: 100vh;
   padding: 80px 0;
+  margin-left: 0;
+  margin-right: 70px;
 }
 
 .page-title {
@@ -437,10 +453,9 @@ body.story-page {
   font-size: 2.5rem;
   font-weight: bold;
   letter-spacing: 0.25em;
+  text-align: left;
   padding-left: 8%;
   margin-bottom: 40px;
-  -webkit-text-stroke: 1.5px var(--accent-red);
-  text-shadow: 0 0 8px rgba(201, 23, 30, 0.5);
 }
 
 /* 記事詳細 */
@@ -950,7 +965,7 @@ rt { font-size: 0.40em; }
   /* 固定ヘッダーの横移動 */
   .site-header {
     width: 100%;
-    height: 60px;
+    height: 80px;
     padding: 10px 20px;
     border-left: none;
     border-bottom: 1px solid rgba(139, 24, 27, 0.35);
