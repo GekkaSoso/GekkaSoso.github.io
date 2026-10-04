@@ -993,7 +993,7 @@ rt { font-size: 0.40em; }
     height: auto;
     min-height: calc(100vh - 60px);
     margin-top: 60px;
-    padding: 40px 20px 60px;
+    padding: 20px 10px 40px;
     background-image: none; /* スマホでは背景画像を削除 */
     display: flex;
     flex-direction: column;
@@ -1003,25 +1003,33 @@ rt { font-size: 0.40em; }
   }
 
   .mv-catch {
+    width: 100%
     max-width: 100%;
+    padding: 0 10px;
     text-align: center;
     align-items: center;
   }
 
   .catch-title {
-    margin-top: 0;
-    order: 1; /* タイトル（画像）を先頭（上）に配置 */
+    margin-top: 25px;
+    width: 100%;
+    order: initial;
   }
 
   .catch-title img {
-    max-width: 100%;
+    width: 100%;
+    max-width: 320px;
     height: auto;
+    max-height: none;
     margin: 0 auto;
   }
 
   .catch-lead {
-    order: 2; /* リード文（文字）を画像の下に配置 */
-    margin-top: 20px;
+    width: 100%
+    order: initial;
+    font-size: 1.1rem;
+    letter-spacing: 0.15em;
+    margin-bottom: 6px;
   }
 
   /* メニューのスマホ対応 */
