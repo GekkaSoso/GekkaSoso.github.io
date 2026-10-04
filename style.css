@@ -1034,6 +1034,7 @@ rt { font-size: 0.40em; }
 
   .catch-lead {
     margin-top: 20px;
+    font-size: 1rem; 
   }
 
   /* メニュー */
