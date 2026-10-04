@@ -123,10 +123,14 @@ img {
   height: 100vh;
   padding-left: 8%;
   background-color: var(--bg-dark);
+  
+  /* --- 背景画像の設定調整 --- */
   background-image: url('top.png');
   background-repeat: no-repeat;
-  background-position: right center;
-  background-size: 50% 100%;
+  background-position: center right; /* 右寄りに配置 */
+  background-size: cover;            /* 画面いっぱいに綺麗に収める場合 */
+  /* もし右半分だけに背景を表示したい場合は下記にしてください */
+  /* background-size: contain; */
 }
 
 .mv-catch {
