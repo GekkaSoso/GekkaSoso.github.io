@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>News｜月華葬送</title>
+    <title>制作体制の変更について。｜月華葬送</title>
 
     <!-- Google Fonts（和風明朝体） -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,7 +16,7 @@
     <!-- JavaScriptの読み込み -->
     <script src="main.js" defer></script>
 </head>
-<body class="news-page">
+<body class="news-detail-page">
 
     <!-- ヘッダー（共通） -->
     <header class="site-header">
@@ -37,48 +37,39 @@
         <!-- 花びら舞い落ちエリア -->
         <div class="shooting-stars" aria-hidden="true"></div>
 
-        <h1 class="page-title">NEWS</h1>
+        <h1 class="page-title"></h1>
 
-        <!-- 画面左右いっぱいに広がる黒帯エリア -->
-        <div class="news-band">
-            <ul class="news-list">
-                <li class="news-item">
-                    <a href="20261005.html">
-                        <span class="news-date">2026.10.05</span>
-                        <span class="news-category">Info</span>
-                        <span class="news-title-text">制作体制の変更について。</span>
-                    </a>
-                </li>
-                <li class="news-item">
-                    <a href="20261004.html">
-                        <span class="news-date">2026.10.04</span>
-                        <span class="news-category">Info</span>
-                        <span class="news-title-text">公式サイトを公開しました。</span>
-                    </a>
-                </li>
-                <li class="news-item">
-                    <a href="20261001.html">
-                        <span class="news-date">2026.10.01</span>
-                        <span class="news-category">Event</span>
-                        <span class="news-title-text">2026/10/04 (Sun) 開催の文学フリマ福岡12に水奏・花月が参加します。</span>
-                    </a>
-                </li>
-                <li class="news-item">
-                    <a href="20260925.html">
-                        <span class="news-date">2026.09.25</span>
-                        <span class="news-category">Info</span>
-                        <span class="news-title-text">「月華葬送」プロジェクト始動と告知解禁しました。</span>
-                    </a>
-                </li>
-                <li class="news-item">
-                    <a href="20260918.html">
-                        <span class="news-date">2026.09.18</span>
-                        <span class="news-category">Media</span>
-                        <span class="news-title-text">「セカイノカケラを繋ぎたいOnTheRadio」に水奏が出演します。</span>
-                    </a>
-                </li>
-                <!-- 過去のお知らせを追加する場合も同じ記述で増やせます -->
-            </ul>
+        <!-- 画面左右いっぱいに広がる黒帯エリア（Story同等） -->
+        <div class="article-band">
+            <article class="article-container">
+                
+                <!-- 記事ヘッダー（日付・カテゴリー・タイトル） -->
+                <header class="article-header">
+                    <div class="article-meta">
+                        <time class="article-date">2026.10.05</time>
+                        <span class="article-category">Info</span>
+                    </div>
+                    <h2 class="article-title">制作体制の変更について。</h2>
+                </header>
+
+                <!-- 記事本文 -->
+                <div class="article-body">
+                    <p>
+                       「月華葬送」は制作体制の変更に伴い、同人サークル「或る夜の書架」から「水奏都季」による個人制作に移行いたしました。今回の変更に伴い、クレジットおよびサイト内の表記を一部更新しております。<br>
+                        <br>
+                       引き続き、完成に向けて制作を進めてまいります。何卒よろしくお願いいたします。
+                    </p>
+
+                <br>
+                <br>
+                </div>
+
+                <!-- 記事フッター（一覧へ戻るボタン） -->
+                <footer class="article-footer">
+                    <a href="news.html" class="back-btn">一覧へ戻る</a>
+                </footer>
+
+            </article>
         </div>
     </main>
 
