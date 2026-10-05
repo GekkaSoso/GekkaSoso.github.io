@@ -901,6 +901,26 @@ body.story-page {
 }
 
 /* ==========================================
+   YouTube動画埋め込み対応
+   ========================================== */
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 のアスペクト比を維持 */
+  margin: 20px 0;
+  background-color: #000;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* ==========================================
    ルビ・花びらアニメーション
    ========================================== */
 ruby { font-size-adjust: none; }
@@ -1034,7 +1054,7 @@ rt { font-size: 0.40em; }
 
   .catch-lead {
     margin-top: 20px;
-    font-size: 0.9rem; 
+    font-size: 1rem;
   }
 
   /* メニュー */
